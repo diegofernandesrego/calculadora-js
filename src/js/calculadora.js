@@ -1,6 +1,7 @@
 var Calculadora = {
-    adicionar: function(num1,num2){
-        if(isNaN(num1) || isNaN(num2)){
+
+    adicionar: function (num1, num2) {
+        if (isNaN(num1) || isNaN(num2)) {
             return 0;
         }
         num1 = parseFloat(num1);
@@ -8,25 +9,32 @@ var Calculadora = {
         return num1 + num2;
     },
 
-    subtrair: function(num1,num2){
-        if(isNaN(num1) || isNaN(num2)){
+    subtrair: function (num1, num2) {
+        if (isNaN(num1) || isNaN(num2)) {
             return 0;
         }
         return num1 - num2;
     },
 
-    dividir: function(num1,num2){
-        return 0;
+    dividir: function (num1, num2) {
+        if (isNaN(num1) || isNaN(num2)) {
+            return 0;
+        }
+
+        if (num2 == 0) {
+            return "Impossivel dividir por zero";
+        }
+        return num1 / num2;
     },
 
-    multiplicar: function(num1,num2){
+    multiplicar: function (num1, num2) {
         return 0;
     }
 }
 
 
 // usado na função 'require' do NodeJS
-if (typeof module !== 'undefined' 
-	&& typeof module.exports !== 'undefined') {
-	module.exports = Calculadora;
+if (typeof module !== 'undefined'
+    && typeof module.exports !== 'undefined') {
+    module.exports = Calculadora;
 }

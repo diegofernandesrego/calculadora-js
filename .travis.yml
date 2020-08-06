@@ -1,5 +1,5 @@
 language: node_js
 before_install:
-  - "export DISPLAY=:99.0"
+  - export DISPLAY=:99.0
 node_js:
   - 'node'

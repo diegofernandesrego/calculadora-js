@@ -34,8 +34,6 @@ describe("Suíte de teste de divisão", function(){
         expect(Calculadora.dividir( 10, 0)).toEqual('Impossivel dividir por zero');
     });
 
-    // if(num2 == 0){
-    //     return "Impossivel dividir por zero";
-    // }
+   
 
 })
